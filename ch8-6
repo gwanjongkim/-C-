@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int event(int n) {
+	return (n % 2 == 0) ? 1 : 0;
+}
+int absolute(int n) {
+	return (n >= 0) ? n : -n;
+}
+int sign(int n) {
+	return (n < 0) ? -1 : 0;
+}
+int main(void) {
+	double f;
+	scanf_s("%lf", &f);
+	printf("event() : %s\n", (event(f) == 1) ? "짝수" : "홀수");
+	printf("absolute() : %d\n", absolute(f) );
+	printf("sign() : %s\n", (sign(f) == -1) ? "음수" : "양수");
+	
+}
