@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+double f_rand() {
+    return (double) rand() / (double) RAND_MAX;
+}
+
+int main(void) {
+    srand((unsigned)time(NULL)); // 시드는 딱 한 번만 설정
+
+    printf("%lf", f_rand());
+    printf("%lf", f_rand());
+    printf("%lf", f_rand());
+    printf("%lf", f_rand());
+    printf("%lf", f_rand());
+
+    return 0;
+}
