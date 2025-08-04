@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define PI 3.141592653589793
+void b_rand() {
+	printf("%d ", rand() % 2);
+}
+int main(void) {
+	b_rand();
+	b_rand();
+	b_rand();
+	b_rand();
+	b_rand();
+
+}
