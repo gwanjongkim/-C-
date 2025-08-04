@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <ctype.h>
+bool check_alpha(char alpha) {
+	char c = tolower(alpha);
+	if (c >= 'a' && c <= 'z') {
+		return true;
+	}
+	else {
+		return false;
+	}
+	
+}
+int main(void) {
+	char alpha;
+	scanf_s(" %c", &alpha);
+	if (check_alpha(alpha)) {
+		printf("It is alphabet");
+	}
+	else {
+		printf("It is not alphabet");
+	}
+	
+}
