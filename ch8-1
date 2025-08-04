@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+double square(double num) {
+	return num * num;
+}
+int main(void) {
+	double num;
+	printf("input num: ");
+	scanf_s("%lf", &num);
+	printf("%lf", square(num));
+	
+}
