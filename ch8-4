@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int is_leap(int year) {
+	if (year % 4 == 0) {
+		if (year % 100 != 0 || year % 400 ==0) {
+			return 366;
+		}
+		if (year % 100 == 0) {
+			return 365;
+		}
+		else {
+			return 366;
+		}
+	}
+	else {
+		return 365;
+	}
+}
+int main(void) {
+	int year;
+	scanf_s("%d", &year);
+	printf("%d", is_leap(year));
+	
+}
