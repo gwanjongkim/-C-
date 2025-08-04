@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define PI 3.141592653589793
+int b_rand() {
+	return rand() % 2;
+}
+int main(void) {
+	char keep;
+	do {
+		printf("1 or 0:");
+		int coin;
+		scanf_s("%d", &coin);
+		printf("%c\n", (coin == b_rand()) ? 'O' : 'X');
+		printf("Keep? y or n: ");
+		scanf_s(" %c", &keep);
+	} while (keep != 'n');
+
+}
