@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <math.h>
+#define PI 3.141592653589793
+double sin_degree(double degree) {
+	double radian = degree * (PI / 180);
+	return sin(radian);
+}
+
+int main(void) {
+	for (int i = 0; i <= 18; i++) {
+		printf("sin(%d) : %lf\n", i * 10, sin_degree(i * 10));
+	}
+	double angle;
+	scanf_s("%lf", &angle);
+	printf("%lf", sin_degree(angle));
+}
