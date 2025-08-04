@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+void print_value(int n) {
+	for (int i = 0; i < n; i++) {
+		printf("*");
+	}
+	printf("\n");
+	
+}
+int main(void) {
+	int value;
+	do {
+		scanf_s("%d", &value);
+		print_value(value);
+	} while (value > 0);
+
+}
