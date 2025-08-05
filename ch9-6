@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int power(int b, int p) {
+	if (p <= 0) {
+		return 1;
+	}
+	return b * power(b, p - 1);
+}
+
+int main(void) {
+	
+	int b, p;
+	scanf_s("%d %d", &b, &p);
+	printf("%d", power(b, p));
+
+}
