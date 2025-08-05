@@ -1,0 +1,61 @@
+#include <stdio.h>
+
+void add() {
+	int x, y;
+	scanf_s("%d %d", &x, &y);
+	printf("%d\n", x + y);
+}
+
+void remove() {
+	int x, y;
+	scanf_s("%d %d", &x, &y);
+	printf("%d\n", x - y);
+}
+
+void multiple() {
+	int x, y;
+	scanf_s("%d %d", &x, &y);
+	printf("%d\n", x * y);
+}
+
+void divide() {
+	int x, y;
+	scanf_s("%d %d", &x, &y);
+	printf("%f\n", float(x) + float(y));
+}
+
+void remain() {
+	int x, y;
+	scanf_s("%d %d", &x, &y);
+	printf("%d\n", x % y);
+}
+
+void menu() {
+	printf("menu\n1. add\n2.remoove\n3.multiple\n4.divide\n5.remain\n");
+	
+	int op;
+	scanf_s("%d\n", &op);
+	switch (op)
+	{
+	case 1: add(); break;
+	case 2:remove(); break;
+	case 3:multiple(); break;
+	case 4:divide(); break;
+	case 5:remain(); break;
+	default:
+		printf("Wrong op\n");
+		break;
+	}
+}
+
+int main(void) {
+	while (true) {
+		menu();
+		printf("To keep, press y : ");
+		char keep;
+		scanf_s(" %c", &keep);
+		if (keep != 'y') {
+			return 0;
+		}
+	}
+}
