@@ -1,0 +1,58 @@
+#include <stdio.h>
+
+void add(int x, int y) {
+	
+	static int count = 0;
+	count += 1;
+
+	printf("%d\n", x + y);
+	printf("add %d time work\n", count);
+}
+
+void remove(int x, int y) {
+	static int count = 0;
+	count += 1;
+	
+	printf("%d\n", x - y);
+	printf("remove %d time work\n", count);
+}
+
+void multiple(int x, int y) {
+	static int count = 0;
+	count += 1;
+	
+	printf("%d\n", x * y);
+	printf("multiple %d time work\n", count);
+}
+
+void divide(int x, int y) {
+	static int count = 0;
+	count += 1;
+
+	printf("%f\n", float(x) + float(y));
+	printf("divide %d time work\n", count);
+}
+
+void menu(int num1, char op, int num2) {
+	
+	switch (op)
+	{
+	case '+': add(num1, num2); break;
+	case '-':remove(num1, num2); break;
+	case '*':multiple(num1, num2); break;
+	case '/':divide(num1, num2); break;
+	default:
+		printf("Wrong op\n");
+		break;
+	}
+}
+
+int main(void) {
+	while (true) {
+		int num1, num2;
+		char op;
+		printf("input calculation: ");
+		scanf_s("%d %c %d", &num1, &op,1, &num2);
+		menu(num1, op, num2);
+	}
+}
