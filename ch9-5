@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int sum(int num) {
+	if (num <= 0) {
+		return 0;
+	}
+	return num + sum(num - 1);
+}
+
+int main(void) {
+	
+	int num;
+	scanf_s("%d", &num);
+	printf("%d", sum(num));
+
+}
