@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int get_random(){
+	static int inited = 0;
+	inited += 1;
+	if (inited == 1) {
+		srand((unsigned)(time(NULL)));
+		printf("reset\n");
+	}
+	return rand();
+}
+
+int main(void) {
+	
+	printf("%d\n", get_random());
+	printf("%d\n", get_random());
+	printf("%d\n", get_random());
+
+}
