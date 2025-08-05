@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int show_digit(int x) {
+	if (x < 10) {
+		printf("%d", x);
+		return 1;
+	}
+	printf("%d ", x % 10);
+	return show_digit(x / 10);
+}
+
+int main(void) {
+	
+	int x;
+	printf("input iteger: ");
+	scanf_s("%d", &x);
+	show_digit(x);
+
+}
