@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+double recursive(double n) {
+	if (n <= 1) {
+		return 1;
+	}
+	return 1 / n + recursive(n - 1);
+}
+
+int main(void) {
+	
+	printf("%lf", recursive(5));
+
+}
