@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#define SIZE 10
+#define ROW 10
+#define COL 3
+
+int main(void) {
+	int arr[ROW][COL];
+	srand((unsigned)time(NULL));
+	for (int i = 0; i < ROW; i++) {
+		for (int j = 0; j < COL; j++) {
+			arr[i][j] = rand() % 101;
+		}
+	}
+	for (int i = 0; i < COL; i++) {
+		int maximum = arr[0][i];
+		int minimum = arr[0][i];
+		for (int j = 0; j < ROW; j++) {
+			if (arr[j][i] > maximum) {
+				maximum = arr[j][i];
+			}
+			if (arr[j][i] < minimum) {
+				minimum = arr[j][i];
+			}
+		}
+		printf("test %d max is %d, min is %d\n", i, maximum, minimum);
+	}
+	
+}
