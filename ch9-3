@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int check() {
+	static int count = 0;
+	count += 1;
+	int password;
+	if (count > 3) {
+		printf("Over Try");
+		return 0;
+	}
+	printf("password: ");
+	scanf_s("%d", &password);
+	
+		if (password == 1234) {
+			return 0;
+		}
+		else {
+			return 1;
+		}
+	
+	
+	
+}
+
+int main(void) {
+	
+	while(true){
+				
+		if (check() == 0) {
+			return 0;
+		}
+	
+	}
+	
+
+}
