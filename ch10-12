@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#define SIZE 10
+#define ROW 10
+#define COL 3
+
+int main(void) {
+	int stock[SIZE];
+	srand((unsigned)time(NULL));
+	
+	for (int i = 0; i < SIZE; i++) {
+		stock[i] = rand() % 5 + 1;
+	}
+
+	int num;
+	printf("input stock num: ");
+	scanf_s("%d", &num);
+	printf("stock no.%d is in zone %d", num, stock[num]);
+	
+}
