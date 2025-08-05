@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <math.h>
+#define E 0.000001
+double f_abs(double x) {
+	return (x > 0) ? x : -x;
+}
+double f_min(double x, double y) {
+	double abs_x = f_abs(x);
+	double abs_y = f_abs(y);
+	return (abs_x < abs_y) ? abs_x : abs_y;
+}
+int f_equal(double a, double b) {
+	double check;
+	check = f_abs(a - b) / f_min(a, b);
+	if (check < E) {
+		return 1;
+	}
+	else {
+		return 0;
+	}
+}
+int main(void) {
+	double a, b;
+	scanf_s("%lf %lf", &a, &b);
+	(f_equal(a, b) == 1) ? printf("same") : printf("different");
+}
