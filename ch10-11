@@ -1,0 +1,15 @@
+void vector_add(double x[], double y[], double z[]) {
+	
+	for (int i = 0; i < 3; i++){
+		z[i] += (x[i] + y[i]);
+		
+	}
+}
+
+double vector_dot_prod(double x[], double y[]) {
+	double prod = 0;
+	for (int i = 0; i < 3; i++) {
+		prod += x[i] * y[i];
+		}
+	return prod;
+}
