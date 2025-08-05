@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int show_digit(int x) {
+	static int count = 0;
+	
+	if (x < 10) {
+		count += x;
+		return count;
+	}
+	count += x % 10;
+	return show_digit(x / 10);
+}
+
+int main(void) {
+	
+	int x;
+	printf("input iteger: ");
+	scanf_s("%d", &x);
+	printf("sum of digit: %d", show_digit(x));
+
+}
