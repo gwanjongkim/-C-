@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#define SIZE 10
+#define ROW 10
+#define COL 3
+
+void array_fill(int *A, int size) {
+	for (int i = 0; i < size; i++) {
+		A[i] = rand();
+	}
+}
+
+int main(void) {
+	srand((unsigned)time(NULL));
+	int arr[SIZE];
+	array_fill(arr, SIZE);
+	for (int i = 0; i < SIZE; i++) {
+		printf("%d ", arr[i]);
+	}
+	
+
+}
